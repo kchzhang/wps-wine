@@ -36,6 +36,7 @@ RUN wget -O /tmp/wps-office2023.exe "https://github.com/kchzhang/wps-wine/releas
     rm /tmp/wps-office2023.exe
 
 
+    
 # 创建工作目录
 WORKDIR /app
 

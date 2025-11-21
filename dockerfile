@@ -30,9 +30,9 @@ RUN winecfg && \
     winetricks -q vcrun2013 && \
     winetricks -q vcrun2015
 
-COPY wps-office2023.exe /tmp/wps-office2023.exe
 # 下载并安装WPS Office
-RUN xvfb-run -a wine /tmp/wps-office2023.exe /S && \
+RUN wget -O /tmp/wps-office2023.exe "https://github.com/kchzhang/wps-wine/releases/download/0.1/wps-office2023.exe" && \
+    xvfb-run -a wine /tmp/wps-office2023.exe /S && \
     rm /tmp/wps-office2023.exe
 
 

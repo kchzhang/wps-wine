@@ -20,9 +20,6 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
-# 安装Python COM支持库
-RUN pip3 install pywin32
-
 # 配置Wine和安装必要的运行库
 RUN winecfg && \
     winetricks -q corefonts && \
